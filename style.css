@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif; 
+    background: linear-gradient(135deg, #6a1b9a, #512da8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.card {
+    background-color: rgba(0,0,0,0.3);
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    width: 350px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+h1 {
+    font-size: 20px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.velocidade-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+input[type="number"] {
+    padding: 5px 10px;
+    font-size: 16px;
+    width: 100px;
+    border-radius: 5px;
+    border: none;
+    text-align: center;
+}
+
+input[type="button"] {
+    padding: 6px 20px;
+    font-size: 16px;
+    background-color: #7e57c2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+input[type="button"]:hover {
+    background-color: #5e35b1;
+}
+
+#resultado {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    min-height: 40px;
+}
+
+.velocimeter-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.velocimeter-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 0deg 144deg,
+        #ff9800 144deg 180deg,
+        #f44336 180deg 360deg
+    );
+    transform: rotate(-90deg);
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
+}
+
+.needle {
+    position: absolute;
+    width: 6px;
+    height: 90px;
+    background: linear-gradient(to top, #ffeb3b, #f44336);
+    top: 10px;
+    left: 50%;
+    transform-origin: bottom center;
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+    border-radius: 3px;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.7);
+    z-index: 1;
+}
+
+.center-circle {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 0 0 8px #fff;
+}
+
+.labels {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.labels span {
+    position: absolute;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+}
