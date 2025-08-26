@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projeto Detran</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="card">
+    <h1>Sistema de Multas | Limite 80 Km/h</h1>
+
+    <div class="velocidade-container">
+        Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> Km/h
+        <input type="button" value="Verificar" onclick="calcular()">
+    </div>
+
+    <div id="resultado"></div>
+
+    <div class="velocimeter-container">
+        <div class="velocimeter-bg"></div>
+        <div class="needle" id="needle"></div>
+        <div class="center-circle"></div>
+
+        <div class="labels">
+            <span style="top:10px; left:50%;">0</span>
+            <span style="top:50%; left:95%;">80</span>
+            <span style="bottom:10px; left:50%;">160</span>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
