@@ -16,3 +16,18 @@ function calcular() {
     if(angle > 180) angle = 180;
     needle.style.transform = `rotate(${angle}deg)`;
 }
+function resetar(){
+    const resultadoDiv = document.getElementById("resultado");
+    const needle = document.getElementById("needle");
+    const inputVel = document.getElementById("txtvel");
+
+    // limpa texto
+    resultadoDiv.innerHTML = "";
+    resultadoDiv.style.color = "black";
+
+    // volta agulha para zero
+    needle.style.transform = "rotate(0deg)";
+
+    // limpa input
+    inputVel.value = "";
+}
